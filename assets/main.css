@@ -33,6 +33,13 @@ body {
     color: var(--text-color);
 }
 
+section{
+  display: none;
+  &:target{
+    display: block;
+  }
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -90,7 +97,7 @@ section {
 }
 
 .home {
-    display: flex;
+    display: block;
     align-items: center;
     padding: 10% 9% 10% 20%;
     background: url('/images/phonnz_circle.png') no-repeat;
