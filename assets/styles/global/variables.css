@@ -1,5 +1,11 @@
 body, *::before, *::after {
-	--background: #f7f0eb;
+  --second_background: #5B1C6Eff;
+  --highlight: #F52D97ff;
+  --main: #6817E2ff;
+  --high: #09602Cff;
+  --focus: #55D8C0ff;
+	
+  --background: #f7f0eb;
 	--purple_bright: #9440a0;
 	--purple: #7561c1;
 	--navy: #364c93;
@@ -28,7 +34,7 @@ body, *::before, *::after {
 	--filter_yellow: brightness(0) saturate(100%) invert(76%) sepia(68%) saturate(3537%) hue-rotate(4deg) brightness(117%) contrast(111%);
 	--filter_white: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(346deg) brightness(101%) contrast(104%);
 	--filter_black: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7500%) hue-rotate(22deg) brightness(103%) contrast(103%);
-	--filter_neutral: var(--filter_black);
+	--filter_nfocusal: var(--filter_black);
 	--filter_logo: none;
 
 
