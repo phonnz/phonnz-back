@@ -97,3 +97,9 @@ figure {
     width: 100%
   }
 }
+
+div#social{
+  a {
+    font-size: 3em;
+  }
+}
