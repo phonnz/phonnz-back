@@ -3,7 +3,7 @@
 
 /* Header */
 .header{
-    background-color: var(--second_background);
+    background-color: var(--black);
     box-shadow: 1px 1px 5px 0px var(--neutral);
     position: sticky;
     top: 0;
@@ -14,8 +14,8 @@
 .logo{
     display: inline-block;
     color: var(--white);
-    font-size: 60px;
-    margin-left: 10px;
+    font-size: 30px;
+    margin-left: 5px;
 
 }
 
@@ -51,7 +51,7 @@ nav {
 }
 .menu a{
     display: block;
-    padding: 30px;
+    padding: 5px;
     color: var(--white);
 
 }

@@ -71,6 +71,12 @@ body {
   overflow-x: hidden;
   word-break: break-word;
   overflow-wrap: break-word;
+
+  &:not(:has(section:target)) {
+		& section:first-of-type {
+			display: block;
+		}
+	}
 }
 
 /* Make the header bg full width, but the content inline with body */
@@ -110,18 +116,18 @@ h3 {
 
 /* Format navigation */
 nav {
-  font-size: 1rem;
-  line-height: 2;
-  padding: 1rem 0;
+  font-size: .5em;
+  line-height: 1em;
+  padding: .2rem 0;
 }
 
 nav a {
-  margin: 1rem 1rem 0 0;
-  border: 1px solid var(--border);
+  margin: 0;
+  border: .5em solid var(--border);
   border-radius: 5px;
   color: var(--text) !important;
   display: inline-block;
-  padding: 0.1rem 1rem;
+  padding: .5em;
   text-decoration: none;
   transition: 0.4s;
 }
@@ -142,6 +148,13 @@ footer {
   font-size: 0.9rem;
   text-align: center;
   border-top: 1px solid var(--border);
+
+  & div#social{
+
+  & a {
+    font-size: 3em;
+  }
+  }
 }
 
 /* Format headers */
@@ -432,8 +445,8 @@ fieldset {
 
 hr {
   color: var(--border);
-  border-top: 1px;
   margin: 1rem auto;
+  border-top: 1px;
 }
 
 mark {
@@ -446,7 +459,7 @@ main img,
 main video {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 5px5
 }
 
 figure {

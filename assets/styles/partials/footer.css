@@ -32,6 +32,12 @@ footer {
 		height: 1.2em;
 		filter: var(--filter_purple);
 	}
+  & div#social{
+
+  & a {
+    font-size: 3em;
+  }
+  }
 }
 
 .theme_toggle {

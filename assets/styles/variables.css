@@ -1,0 +1,5 @@
+body, *::before, *::after {
+	--white: #ffffff;
+	--black: #0d0d0d;
+
+}

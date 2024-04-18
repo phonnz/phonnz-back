@@ -3,6 +3,7 @@
  @import './demos/index.css';
   **/
  @import './partials/header.css';
+ @import './variables.css';
  @import './nav.css';
 @import './custom.css';
 @import './toggle.css';
@@ -19,12 +20,42 @@
 main {
 	overflow-y: auto;
 	overflow-x: visible;
+	padding: 20px;
 }
 
 section {
 	display: none;
+  height: 100%;
+	padding: 1px 0;
+
+	& > h2:first-child {
+		margin-top: 0;
+	}
 
 	&:target {
 		display: block;
+	}
+}
+
+@media(min-width: 40em) {
+	main {
+		padding: 35px;
+	}
+}
+
+@media(min-width: 60em) {
+	main {
+		padding: 50px 5vw;
+	}
+}
+
+@media(min-width: 80em) {
+	main {
+		padding: 50px 0;
+	}
+
+	section {
+		max-width: 1000px;
+		margin: 0 auto;
 	}
 }
