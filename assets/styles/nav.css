@@ -1,8 +1,6 @@
 /* Theming */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
-
-
 /* Header */
 .header{
     background-color: var(--second_background);

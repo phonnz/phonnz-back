@@ -53,6 +53,12 @@ body {
 	width: 100vw;
 	margin: 0;
 	background: var(--background);
+
+  &:not(:has(section:target)) {
+		& section:first-of-type {
+			display: block;
+		}
+	}
 }
 
 .sr-only {
