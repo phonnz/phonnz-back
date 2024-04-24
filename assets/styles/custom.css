@@ -22,7 +22,7 @@
   --text-light: #585858;
   --border: #d8dae1;
   --accent: #0d47a1;
-  --accent-light: #90caf9;
+ u--accent-light: #90caf9;
   --code: #d81b60;
   --preformatted: #444;
   --marked: #ffdd33;
@@ -79,28 +79,6 @@ body {
 	}
 }
 
-/* Make the header bg full width, but the content inline with body */
-/**
-header {
-  background: var(--accent-bg);
-  border-bottom: 1px solid var(--border);
-  text-align: center;
-  padding: 2rem 0.5rem;
-  width: 100vw;
-  position: relative;
-  box-sizing: border-box;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-}
- **/
-
-/* Remove margins for header text */
-header h1,
-header p {
-  margin: 0;
-}
 
 /* Add a little padding to ensure spacing is correct between content and nav */
 main {

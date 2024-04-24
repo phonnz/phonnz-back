@@ -1,8 +1,22 @@
 header {
-	padding: 20px;
-	position: relative;
-	z-index: 2;
-	text-align: center;
+  border-bottom: 1px solid var(--border);
+  box-sizing: border-box;
+  box-shadow: 1px 1px 5px 0px var(--neutral);
+/**
+background: var(--accent-bg);
+   * 
+   left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+   */
+  padding: 2rem 0.5rem;
+  position: sticky;
+  text-align: center;
+  top: 0;
+  width: 100vw;
+  z-index: 2;
 
 	&::before {
 		content: '';
@@ -42,6 +56,13 @@ header {
     max-width: 100px;
 	}
 }
+
+/* Remove margins for header text */
+header h1,
+header p {
+  margin: 0;
+}
+
 
 @media(min-width: 40em) {
 	header {
