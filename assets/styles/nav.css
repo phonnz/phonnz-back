@@ -11,7 +11,32 @@
     width: 100%;
 }
  * */
+/* Format navigation */
+nav {
+  font-size: .8em;
+  line-height: 1em;
+  padding: .2rem 0;
+}
 
+nav a {
+  margin: 0;
+  border: .5em solid var(--border);
+  border-radius: 5px;
+  color: var(--text) !important;
+  display: inline-block;
+  padding: .5em;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+nav a:hover {
+  color: var(--accent) !important;
+  border-color: var(--accent);
+}
+
+nav a.current:hover {
+  text-decoration: none;
+}
 /* Logo */
 .logo{
     display: inline-block;
