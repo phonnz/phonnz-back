@@ -159,7 +159,8 @@ nav {
 /* Responsiveness */
 
 @media (min-width: 768px) {
-    .nav{
+    .nav {
+        font-size: 1em; 
         max-height: none;
         top: 0;
         position: relative;

@@ -408,15 +408,17 @@ mark {
   background: var(--marked);
 }
 
-main img,
+figure img,
 main video {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 5px5
 }
 
 figure {
-  margin: 0;
+  margin: auto;
+  max-width: 90%;
+  
 }
 
 figcaption {
