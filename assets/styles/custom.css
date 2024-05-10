@@ -114,15 +114,13 @@ footer {
 h1 {
   font-size: calc(
     var(--base-fontsize) * var(--header-scale) * var(--header-scale) *
-      var(--header-scale) * var(--header-scale)
-  );
+      var(--header-scale)   );
   margin-top: calc(var(--line-height) * 1.5rem);
 }
 
 h2 {
   font-size: calc(
-    var(--base-fontsize) * var(--header-scale) * var(--header-scale) *
-      var(--header-scale)
+    var(--base-fontsize) * var(--header-scale) * var(--header-scale)
   );
   margin-top: calc(var(--line-height) * 1.5rem);
 }
