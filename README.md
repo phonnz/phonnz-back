@@ -1,3 +1,12 @@
+- spin new <name> -t static-fileserver
+- cargo new <name>
+- cargo run
+- trunk serve
+- trunk build --release
+- spin up
+- spin deploy 
+
+
 <div align="center">
   <h1>Fermyon Spin</h1>
   <picture>
