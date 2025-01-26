@@ -1,8 +1,13 @@
 use yew::prelude::*;
 
+mod main_content;
+use main_content::MainContent;
+
 #[function_component(Home)]
 pub fn home() -> Html {
     html! {
-        <h3>{ "Good monrning Shandaloo!" }</h3>
+            <>
+        <MainContent/>
+       </>
     }
 }

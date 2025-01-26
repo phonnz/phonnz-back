@@ -12,8 +12,5 @@ pub fn app() -> Html {
     };
 
     html! {
-        <div>
-            <button {onclick}>{ "+1" }</button>
-            <p>{ *counter }</p>
-        </div>
+
     } }
