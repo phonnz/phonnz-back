@@ -1,11 +1,11 @@
 
 use yew::{Component, Context, Html};
 
-const HTML: &str = include_str!("main.html");
+const HTML: &str = include_str!("youtube.html");
 
-pub struct MainContent;
+pub struct YoutubeContent;
 
-impl Component for MainContent{
+impl Component for YoutubeContent{
     type Message = ();
     type Properties = ();
 

@@ -1,8 +1,10 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
+use crate::routes::{Route, switch};
+
 mod routes;
-use routes::{Route, switch};
+mod algos;
 
 #[function_component(App)]
 fn app() -> Html {
