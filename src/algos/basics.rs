@@ -14,7 +14,8 @@ fn string_operations() -> bool {
     assert_eq!("Hola, mundo", generated_string);
     let generated_named_string = format!("Hola, {}", get_name(Some("trainee".to_string())));
     assert_eq!("Hola, mundo", generated_named_string);
-
+    let reverse_string: String = generated_named_string.chars().rev().collect();
+    assert_eq!("eeniart ,aloH", reverse_string);
 
     true
 }
