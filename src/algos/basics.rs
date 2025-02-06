@@ -16,6 +16,9 @@ fn string_operations() -> bool {
     assert_eq!("Hola, mundo", generated_named_string);
     let reverse_string: String = generated_named_string.chars().rev().collect();
     assert_eq!("eeniart ,aloH", reverse_string);
+   // let reverse_graphemes: String = generated_named_string.graphemes().rev().collect();
+    //assert_eq!("eeniart ,aloH", reverse_graphemes);
+
 
     true
 }
@@ -41,6 +44,9 @@ fn variables() -> bool {
     }
 
     assert_eq!(original_sum, 26);
+    let n: u16 = 38u8 as u16;
+    let sum: u32 = n as u32 + 1000000;
+    assert_eq!(sum, 1000038);
 
     true
 }
