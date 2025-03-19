@@ -1,10 +1,10 @@
 use yew::prelude::*;
-mod youtube_content;
-use youtube_content::YoutubeContent;
+mod youtube_grid;
+use youtube_grid::YoutubeGrid;
 
 #[function_component(Youtube)]
 pub fn youtube() -> Html {
     html! {
-        <YoutubeContent/>
+        <YoutubeGrid/>
     }
 }
