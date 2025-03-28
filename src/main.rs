@@ -1,11 +1,14 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-use crate::routes::{Route, switch};
-use components::MainNav
-
-mod routes;
 mod algos;
+mod routes; 
+mod components;
+mod pages;
+
+use routes::{Route, switch};
+use components::MainNav;
+
 
 #[function_component(App)]
 fn app() -> Html {

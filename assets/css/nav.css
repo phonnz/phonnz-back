@@ -1,187 +1,98 @@
-/* Theming */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-
-/* Header
- *
-.header{
-    background-color: var(--black);
-    box-shadow: 1px 1px 5px 0px var(--neutral);
-    position: sticky;
-    top: 0;
-    width: 100%;
-}
- * */
-/* Format navigation */
-nav {
-  font-size: .8em;
-  line-height: 1em;
-  padding: .2rem 0;
-}
-
-nav a {
-  margin: 0;
-  border: .5em solid var(--border);
-  border-radius: 5px;
-  color: var(--text) !important;
-  display: inline-block;
-  padding: .5em;
-  text-decoration: none;
-  transition: 0.4s;
-}
-
-nav a:hover {
-  color: var(--accent) !important;
-  border-color: var(--accent);
-}
-
-nav a.current:hover {
-  text-decoration: none;
-}
-/* Logo */
-.logo{
-    display: inline-block;
-    color: var(--white);
-    font-size: 30px;
-    margin-left: 5px;
-
-}
-
-/* Nav menu */
-.nav{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: var(--highlight);
-    overflow: hidden;
-    
-}
-
-
-nav {
-	& ul, & li {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	& a {
-		text-decoration: none;
-		
-		
-		&:hover {
-			text-decoration: underline;
-			text-decoration-color: var(--action);
-			text-decoration-style: wavy;
-			text-underline-offset: 5px;
-		}
-	}
-}
-.menu a{
-    display: block;
-    padding: 5px;
-    color: var(--white);
-
-}
-
-.menu a:hover{
-    background-color: var(--neutral);
-}
-
-.nav{
-    max-height: 0;
-    transition: max-height .5s ease-out;
-}
-
-/* Menu Icon */
-
-.hamb{
-    cursor: pointer;
-    float: right;
-    padding: 40px 20px;
-}
-
-
-.hamb-line {
-    background: var(--white);
-    display: block;
-    height: 2px;
+/* Navigation Styles */
+.main-navigation {
     position: relative;
-    width: 24px;
-    
+    background-color: #333;
+    color: white;
 }
 
-.hamb-line::before,
-.hamb-line::after{
-    background: var(--white);
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-
-.hamb-line::before{
-    top: 5px;
-}
-
-.hamb-line::after{
-    top: -5px;
-}
-
-
-.side-menu {
+.nav-toggle {
     display: none;
 }
 
-/* Toggle menu icon */
-
-.side-menu:checked ~ nav{
-    max-height: 100%;
+.nav-toggle-label {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
-.side-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
 }
 
-.side-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top:0;
-
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
 }
 
-.side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top:0;
+.nav-toggle-label span::before {
+    bottom: 7px;
 }
 
+.nav-toggle-label span::after {
+    top: 7px;
+}
 
-/* Responsiveness */
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
-@media (min-width: 768px) {
-    .nav {
-        font-size: 1em; 
-        max-height: none;
-        top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-        background-color: transparent;
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+}
 
+.nav-link:hover {
+    background-color: #444;
+}
+
+/* Responsive Breakpoint */
+@media screen and (max-width: 768px) {
+    .nav-toggle-label {
+        display: flex;
     }
 
-    .menu li{
-        float: left;
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #333;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 0.3s ease-in-out;
     }
 
-    .menu a:hover{
-        background-color: transparent;
-        color: var(--shadow);
-        
-    }
-    
-    .hamb{
-        display: none;
+    .nav-link {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        text-align: center;
     }
 
+    .nav-toggle:checked ~ .nav-menu {
+        transform: scale(1, 1);
+    }
+
+    .nav-toggle:checked ~ .nav-menu .nav-link {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out 0.2s;
+    }
 }
