@@ -5,8 +5,8 @@
     "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica,
     "Helvetica Neue", sans-serif;
 
-    --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
+    --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   --base-fontsize: 1.15rem;
 
   /* Major third scale progression - see https://type-scale.com/ */
@@ -72,8 +72,8 @@ body {
   word-break: break-word;
   overflow-wrap: break-word;
 
-  &:not(:has(section:target)) {
 		& section:first-of-type {
+  &:not(:has(section:target)) {
 			display: block;
 		}
 	}
@@ -82,7 +82,7 @@ body {
 
 /* Add a little padding to ensure spacing is correct between content and nav */
 main {
-  padding-top: 2.5rem;
+  padding-top: 5.5rem;
 }
 
 /* Fix line height when title wraps */
@@ -115,6 +115,7 @@ h1 {
   font-size: calc(
     var(--base-fontsize) * var(--header-scale) * var(--header-scale) 
       );
+   color: var(--accent); 
   margin-top: calc(var(--line-height) * 1.3rem);
 }
 
@@ -122,6 +123,7 @@ h2 {
   font-size: calc(
     var(--base-fontsize) * var(--header-scale) * var(--header-scale)  * .85
   );
+    color: --var(--accent-light);
   margin-top: calc(var(--line-height) * 1.3rem);
 }
 
@@ -129,7 +131,8 @@ h3 {
   font-size: calc(
     var(--base-fontsize) * var(--header-scale)
     );
-  margin-top: calc(var(--line-height) * 1.3rem);
+     color: --var(--accent-light);
+ margin-top: calc(var(--line-height) * 1.3rem);
 }
 
 h4 {
