@@ -8,6 +8,7 @@ mod pages;
 
 use routes::{Route, switch};
 use components::MainNav;
+use components::Footer;
 
 
 #[function_component(App)]
@@ -18,6 +19,7 @@ fn app() -> Html {
         <main>
             <Switch<Route> render={switch} />
         </main>
+        <Footer />
         </BrowserRouter>
     }
 }
