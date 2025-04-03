@@ -1,7 +1,7 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-use crate::pages::{Home};
+use crate::pages::{HomeContent};
 
 
 #[derive(Properties, PartialEq)]
@@ -51,7 +51,7 @@ pub fn router_link(props: &RouterLinkProps) -> Html {
 pub fn switch(route: Route) -> Html {
     match route {
         Route::Home => html! {
-            <Home />
+            <HomeContent />
 
         },
         

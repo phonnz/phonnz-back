@@ -7,8 +7,7 @@ mod components;
 mod pages;
 
 use routes::{Route, switch};
-use components::MainNav;
-use components::Footer;
+use components::{MainNav, Footer};
 
 
 #[function_component(App)]
