@@ -65,7 +65,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   flex: 1;
-  margin: 0 auto;
+  margin: 1em auto 0 auto;
   max-width: 45rem;
   padding: 0 0.5rem;
   overflow-x: hidden;
@@ -82,7 +82,7 @@ body {
 
 /* Add a little padding to ensure spacing is correct between content and nav */
 main {
-  padding-top: 1.5rem;
+  padding-top: 2.5rem;
 }
 
 /* Fix line height when title wraps */
@@ -377,7 +377,6 @@ textarea {
 /* Ensures the checkbox and radio inputs do not have a set width like other input fields */
 input[type="checkbox"],
 input[type="radio"] {
-  width: auto;
 }
 
 /* do not show border around file selector button */

@@ -1,13 +1,17 @@
 /* Navigation Styles */
 .main-navigation {
-    position: relative;
+    position: fixed;
     background-color: #333;
     color: white;
+    margin: auto;
+    margin-bottom: 1em;
+    padding-left: 3em;
+    width: 50%; 
 }
 
 .nav-toggle {
     display: none;
-}
+   }
 
 .nav-toggle-label {
     display: none;
@@ -65,12 +69,21 @@
 
 /* Responsive Breakpoint */
 @media screen and (max-width: 768px) {
+    .main-navigation {
+        height: 3.5rem;
+        width: 86%;
+        margin: auto;
+    }
+    nav-toggle {
+        height: auto;
+        width: 100%;
+    }
+
     .nav-toggle-label {
         display: flex;
     }
 
     .nav-menu {
-        position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
