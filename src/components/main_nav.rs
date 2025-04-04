@@ -12,7 +12,7 @@ pub fn main_nav() -> Html {
             <div class="nav-menu">
                 <a href="/" class="nav-link">{"Home"}</a>
                 <a href="/about" class="nav-link">{"About"}</a>
-                <a href="/services" class="nav-link">{"Services"}</a>
+                <a href="/youtube" class="nav-link">{"Youtube"}</a>
                 <a href="/contact" class="nav-link">{"Contact"}</a>
             </div>
         </nav>

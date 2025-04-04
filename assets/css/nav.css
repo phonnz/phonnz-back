@@ -1,12 +1,15 @@
 /* Navigation Styles */
 .main-navigation {
-    position: fixed;
+    position: sticky; /* Changed from relative to sticky */
+    top: 0; /* Added to make it stick to the top */
+    z-index: 100; /* Added to ensure it stays on top of other content */
     background-color: #333;
     color: white;
     margin: auto;
     margin-bottom: 1em;
+    max-width: 1000px;
     padding-left: 3em;
-    width: 50%; 
+    width: 100%; 
 }
 
 .nav-toggle {
@@ -73,8 +76,9 @@
         height: 3.5rem;
         width: 86%;
         margin: auto;
+        padding-left: 0;
     }
-    nav-toggle {
+    .nav-toggle {
         height: auto;
         width: 100%;
     }
@@ -92,12 +96,14 @@
         transform: scale(1, 0);
         transform-origin: top;
         transition: transform 0.3s ease-in-out;
+        position: absolute;
     }
 
     .nav-link {
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
         text-align: center;
+        visibility: hidden;
     }
 
     .nav-toggle:checked ~ .nav-menu {
@@ -107,5 +113,8 @@
     .nav-toggle:checked ~ .nav-menu .nav-link {
         opacity: 1;
         transition: opacity 0.3s ease-in-out 0.2s;
+        visibility: visible;
     }
+
+
 }

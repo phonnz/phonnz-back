@@ -12,7 +12,9 @@
 	pointer-events: none;
 }
 
-
+/* Add a little padding to ensure spacing is correct between content and nav */
+main {
+}
 
 section {
 	display: none;
@@ -28,26 +30,9 @@ section {
 		display: block;
 	}
 }
-
-@media(min-width: 40em) {
-	main {
-		padding: 35px;
-	}
-}
-
-@media(min-width: 60em) {
-	main {
-		padding: 50px 5vw;
-	}
-}
-
 @media(min-width: 80em) {
-	main {
-		padding: 50px 0;
-	}
 
 	section {
-		max-width: 1000px;
 		margin: 0 auto;
 	}
 }

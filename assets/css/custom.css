@@ -80,10 +80,7 @@ body {
 }
 
 
-/* Add a little padding to ensure spacing is correct between content and nav */
-main {
-  padding-top: 5.5rem;
-}
+
 
 /* Fix line height when title wraps */
 h1,
