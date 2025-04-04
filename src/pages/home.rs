@@ -1,4 +1,3 @@
-
 use yew::{Component, Context, Html};
 const HTML: &str = include_str!("../components/home.html");
 

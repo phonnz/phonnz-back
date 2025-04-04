@@ -1,7 +1,7 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
-use crate::pages::{HomeContent};
+use crate::pages::{HomeContent, YoutubeGrid};
 
 
 #[derive(Properties, PartialEq)]
@@ -17,6 +17,8 @@ pub struct RouterLinkProps {
 pub enum Route {
     #[at("/")]
     Home,
+    #[at("/youtube")]
+    YoutubeGrid,
 }
 
 
@@ -35,6 +37,7 @@ pub fn router_link(props: &RouterLinkProps) -> Html {
 
     let path = match props.to {
         Route::Home => "/",
+        Route::YoutubeGrid=> "/youtube",
     };
     html! {
         <a 
@@ -54,6 +57,9 @@ pub fn switch(route: Route) -> Html {
             <HomeContent />
 
         },
-        
+        Route::YoutubeGrid => html! {
+            <YoutubeGrid />
+
+        },
     }
 }

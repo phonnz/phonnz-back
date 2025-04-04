@@ -1,9 +1,9 @@
 use yew::{Component, Context, Html, html};
-mod video_card;
-use video_card::VideoCard;
+use crate::components::{VideoCard};
+//mod crate::components::{youtube_card};
 
 // const HTML: &str = include_str!("youtube.html");
-const CSS: &str = include_str!("youtube.css");
+const CSS: &str = include_str!("../components/video_card/youtube.css");
 
 pub struct YoutubeGrid;
 
@@ -37,7 +37,8 @@ impl Component for YoutubeGrid{
                     {
                         video_urls.iter().map(|url| {
                             html! {
-                                <VideoCard url={url.clone()} />
+                               <VideoCard url={url.clone()} />
+
                             }
                         }).collect::<Html>()
                     }
