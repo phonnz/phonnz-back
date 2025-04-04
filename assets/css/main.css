@@ -12,14 +12,12 @@
 	pointer-events: none;
 }
 
-/* Add a little padding to ensure spacing is correct between content and nav */
-main {
-}
 
 section {
 	display: none;
 	height: 100%;
-	padding: 0px 1em;
+	min-height: 70vh;
+	 padding: 0px 1em;
 
 	& > h2:first-child {
 	 color: var(--text-light);
