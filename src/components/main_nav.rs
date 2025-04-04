@@ -1,4 +1,6 @@
 use yew::prelude::*;
+use crate::routes::Route; // Import your Route enum
+use crate::routes::RouterLink; // Import your RouterLink component
 
 #[function_component(MainNav)]
 pub fn main_nav() -> Html {
@@ -10,13 +12,12 @@ pub fn main_nav() -> Html {
             </label>
             
             <div class="nav-menu">
-                <a href="/" class="nav-link">{"Home"}</a>
-                <a href="/talks" class="nav-link">{"Talks"}</a>
-                <a href="/youtube" class="nav-link">{"Youtube"}</a>
-                <a href="/person" class="nav-link">{"Me"}</a>
-                <a href="/goals" class="nav-link">{"Goals"}</a>
+                <RouterLink to={Route::Home} class="nav-link">{"Home"}</RouterLink>
+                <RouterLink to={Route::Talks} class="nav-link">{"Talks"}</RouterLink>
+                <RouterLink to={Route::YoutubeGrid} class="nav-link">{"Youtube"}</RouterLink>
+                <RouterLink to={Route::Person} class="nav-link">{"Me"}</RouterLink>
+                <RouterLink to={Route::Goals} class="nav-link">{"Goals"}</RouterLink>
             </div>
         </nav>
     }
 }
-
