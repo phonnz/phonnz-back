@@ -1,10 +1,17 @@
-use yew::prelude::*;
+use yew::{Component, Context, Html};
+const HTML: &str = include_str!("../components/home.html");
 
+pub struct HomeContent;
 
-#[function_component(Home)]
-pub fn home() -> Html {
-    html! {
-            <h1>{"Hooah!"}
-       </h1>
+impl Component for HomeContent{
+    type Message = ();
+    type Properties = ();
+
+    fn create(_ctx: &Context<Self>) -> Self {
+        Self
+    }
+
+    fn view(&self, _ctx: &Context<Self>) -> Html {
+        Html::from_html_unchecked(HTML.into())
     }
 }

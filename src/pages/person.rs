@@ -1,10 +1,9 @@
 use yew::{Component, Context, Html};
+const HTML: &str = include_str!("../components/person/person.html");
 
-const HTML: &str = include_str!("talks.html");
+pub struct Person;
 
-pub struct TalksContent;
-
-impl Component for TalksContent{
+impl Component for Person{
     type Message = ();
     type Properties = ();
 
